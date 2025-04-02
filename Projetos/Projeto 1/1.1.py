@@ -67,37 +67,45 @@ while(jn<=9999):
             print(f'\nVocê acertou {acertos_digitos} digito(s) desta vez.')
         #Dicas
         if(tent>=5 and dica==0):
-            while(c1=="_" or (c2=="_") or (c3=="_") or (c4=="_") and dica==1 ):
+            while(dica==1):
                 #Primeiro grupo de dicas"
                 print(f'\n\tDicas!')
                 if(c1=="_"):
                     if(b1%2==1):
                         print("O primeiro número é impar!")
                         dica+=1
+                        break
                     else:
                         print(f"O primeiro número é par!")
                         dica+=1
+                        break
                 if(c2=="_"):
                     if(b2%2==1):
                         print("O segundo número é impar!")
                         dica+=1
+                        break
                     else:
                         print(f"O segundo número é par!")
                         dica+=1
+                        break
                 if(c3=="_"):
                     if(b3%2==1):
                         print(f"O segundo número é par!")
                         dica+=1
+                        break
                     else:
                         print(f"O segundo número é impar!")
                         dica+=1
+                        break
                 if(c3=="_"):
                     if(b2%2==1):
                         print(f"O segundo número é par!")
                         dica+=1
+                        break
                     else:
                         print(f"O segundo número é impar!")
                         dica+=1
+                        break
 
                     
             print(c1,c2,c3,c4) #Imprime os numeros já certos e aqueles que faltam;
