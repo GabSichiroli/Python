@@ -167,4 +167,4 @@ while(jn<=9999):
     if(cont==1):
         jn+=1
     else:
-        jn+=10000
+        jn+=100000
