@@ -22,12 +22,13 @@ while(jn<=9999):
     c2="_"
     c3="_"
     c4="_"
+    dica=0
 
     #print(b1,b2,b3,b4) #Controle
 
     #Tentativas e Chutes
     for tent in range(10,-1,-1):
-        print('voce tem', tent, 'tentativas')
+        print('Você tem', tent, 'tentativas')
 
         acertos_digitos=0 #Por rodada;
 
@@ -64,8 +65,42 @@ while(jn<=9999):
             print(f'\nVocê não acertou nenhum digito nesta rodada:')
         else:
             print(f'\nVocê acertou {acertos_digitos} digito(s) desta vez.')
-    
-        print(c1,c2,c3,c4)
+        #Dicas
+        if(tent>=5 and dica==0):
+            while(c1=="_" or (c2=="_") or (c3=="_") or (c4=="_") and dica==1 ):
+                #Primeiro grupo de dicas"
+                print(f'\n\tDicas!')
+                if(c1=="_"):
+                    if(b1%2==1):
+                        print("O primeiro número é impar!")
+                        dica+=1
+                    else:
+                        print(f"O primeiro número é par!")
+                        dica+=1
+                if(c2=="_"):
+                    if(b2%2==1):
+                        print("O segundo número é impar!")
+                        dica+=1
+                    else:
+                        print(f"O segundo número é par!")
+                        dica+=1
+                if(c3=="_"):
+                    if(b3%2==1):
+                        print(f"O segundo número é par!")
+                        dica+=1
+                    else:
+                        print(f"O segundo número é impar!")
+                        dica+=1
+                if(c3=="_"):
+                    if(b2%2==1):
+                        print(f"O segundo número é par!")
+                        dica+=1
+                    else:
+                        print(f"O segundo número é impar!")
+                        dica+=1
+
+                    
+            print(c1,c2,c3,c4) #Imprime os numeros já certos e aqueles que faltam;
 
     #Define vitoria ou derota:
 

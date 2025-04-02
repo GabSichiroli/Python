@@ -1,1 +1,2 @@
 9https://www.dio.me/articles/gerar-numero-int-aleatorio-python (31/03/25 - 10:37)
+https://pt.stackoverflow.com/questions/72678/como-limpar-o-console-no-python#:~:text=Simplesmente%20pressione%20ctrl%20%2B%20L%20(funciona,voc%C3%AA%20nem%20precisa%20escrever%20clear%20) (2-4-25 - 9:43)
