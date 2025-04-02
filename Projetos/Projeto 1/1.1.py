@@ -58,5 +58,3 @@ for i in range(1,10):
             poserrada+=1
     print(poserrada)
     print(c1,c2,c3,c4)
-    
-    
