@@ -36,7 +36,7 @@ while(jn<=9999):
 
         #Validação do chute
 
-        while (1000>=num>=9999):
+        while (1000<num>9999):
 
             print(f'\n\tTome cuidado!!!')
             print(f'\tNúmero invalido')
@@ -66,8 +66,8 @@ while(jn<=9999):
         else:
             print(f'\nVocê acertou {acertos_digitos} digito(s) desta vez.')
         #Dicas
-        if(tent>=5 and dica==0):
-            while(dica==1):
+        if(tent>=6 and dica==0):
+            while(dica==0):
                 #Primeiro grupo de dicas"
                 print(f'\n\tDicas!')
                 if(c1=="_"):
@@ -106,9 +106,47 @@ while(jn<=9999):
                         print(f"O segundo número é impar!")
                         dica+=1
                         break
-
+        #Segunda dica
+        if(tent>=5 and dica==1):
+            while(dica==1):
+                if(c1=="_"):
+                    if(b1%2==1):
+                        print("O 2primeiro número é impar!")
+                        dica=0
+                        break
+                    else:
+                        print(f"O 2primeiro número é par!")
+                        dica=0
+                        break
+                if(c2=="_"):
+                    if(b2%2==1):
+                        print("O 2segundo número é impar!")
+                        dica=0
+                        break
+                    else:
+                        print(f"O 2segundo número é par!")
+                        dica=0
+                        break
+                if(c3=="_"):
+                    if(b3%2==1):
+                        print(f"O 2segundo número é par!")
+                        dica=0
+                        break
+                    else:
+                        print(f"O 2segundo número é impar!")
+                        dica=0
+                        break
+                if(c3=="_"):
+                    if(b2%2==1):
+                        print(f"O 2segundo número é par!")
+                        dica=0
+                        break
+                    else:
+                        print(f"O 2segundo número é impar!")
+                        dica=0
+                        break
                     
-            print(c1,c2,c3,c4) #Imprime os numeros já certos e aqueles que faltam;
+        print(c1,c2,c3,c4) #Imprime os numeros já certos e aqueles que faltam;
 
     #Define vitoria ou derota:
 
