@@ -1,5 +1,4 @@
 9https://www.dio.me/articles/gerar-numero-int-aleatorio-python (31/03/25 - 10:37)
-<<<<<<< HEAD
 while(c1==cont or c2==cont or c3==cont or c4==cont):
 LIMPAR TELA
 as dicas do zero

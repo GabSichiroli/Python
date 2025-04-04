@@ -1,6 +1,7 @@
 #Bibliotecas;
 
 import random
+import sys
 
 jn=0 #Variavel controle para se jogar novamente(jn=jogar novamente)
 
@@ -26,7 +27,7 @@ while(jn<=9999): #Admistrador "Jogar novamente";
     c3=-3
     c4=-4
     dica=1
-
+    impar=0
     #Tentativas e Chutes
     for tent in range(10,0,-1):
         print('Você tem', tent, 'tentativas')
@@ -68,7 +69,7 @@ while(jn<=9999): #Admistrador "Jogar novamente";
             print(f'\nVocê acertou {acertos_digitos} digito(s) desta vez.')
         
         #Dicas;
-        if(tent<5):
+        if(tent<=6):
             numero_aleatorio = random.randint(1,4)
             cont=numero_aleatorio*-1
             if(cont==c1):
@@ -84,34 +85,49 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                 if(cont==0):
                     print(f"TALVEZZZ o número seja oval.")
                 if(cont%2==1):
-                    print(f"O numero da posição {numero_aleatorio*-1} é impar")
-                    impar=1
+                    print(f"O numero da posição {numero_aleatorio} é impar")
+                    impar+=1
                 else:
-                    print(f"O numero da posição{numero_aleatorio*-1} é par")
-                    paar=1
+                    print(f"O numero da posição{numero_aleatorio} é par")
                 dica+=1 
 
             if((dica==2)and(tent==4 or tent==2)):
-                if(paar==1):
-                    if(cont>4):
-                        print(f"O numero da posição {numero_aleatorio*-1} é maior que 4")
-                    if(cont<6):
-                        print(f"O numero da posição {numero_aleatorio*-1} é menor que 6")
-                else:
+                if(impar==1):
                     if(cont>5):
-                        print(f"O numero da posição {numero_aleatorio*-1} é maior que 5")
+                        print(f"O numero da posição {numero_aleatorio} é maior que 5")
                     if(cont<5):
-                        print(f"O numero da posição {numero_aleatorio*-1} é menor que 5")
+                        print(f"O numero da posição {numero_aleatorio} é menor que 5")
+                else:
+                    if(cont<4):
+                        print(f"O numero da posição {numero_aleatorio} é maior que 4")
+                    if(cont>6):
+                        print(f"O numero da posição {numero_aleatorio} é menor que 6")
                 dica-=1
+                impar-=1
 
-        print(c1,c2,c3,c4) #Imprime os numeros já certos e aqueles que faltam;
+        if(c1==-1):
+            sys.stdout.write(" _ ")
+        else:
+            sys.stdout.write(f" {c1} ")
+        if(c2==-2):
+            sys.stdout.write(" _ ")
+        else:
+            sys.stdout.write(f" {c2} ")
+        if(c3==-3):
+            sys.stdout.write(" _ ")
+        else:
+            sys.stdout.write(f" {c3} ")
+        if(c4==-4):
+            print(" _ ")
+        else:
+            print(f" {c4} ")
 
     #Define vitoria ou derota:
 
         if (num==num_correto):
             print('Você acertou!')
             tent=11-tent
-            print(f"Acertou em {tent} tentativas, muito bem!")
+            print(f"\n\tAcertou em {tent} tentativas, muito bem!")
             break
         else:
             if (tent==0):
