@@ -106,17 +106,17 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                 impar-=1
 
         if(c1==-1):
-            sys.stdout.write(" _ ")
+            print(" _ ", end=" ")
         else:
-            sys.stdout.write(f" {c1} ")
+            print(f" {c1} ", end=" ")
         if(c2==-2):
-            sys.stdout.write(" _ ")
+            print(" _ ", end=" ")
         else:
-            sys.stdout.write(f" {c2} ")
+            print(f" {c2} ", end=" ")
         if(c3==-3):
-            sys.stdout.write(" _ ")
+            print(" _ ", end=" ")
         else:
-            sys.stdout.write(f" {c3} ")
+            print(f" {c3} ", end=" ")
         if(c4==-4):
             print(" _ ")
         else:
