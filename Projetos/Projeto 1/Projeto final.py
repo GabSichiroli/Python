@@ -92,8 +92,6 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                 dica+=1 
 
             if((dica==2)and(tent==4 or tent==2)):
-                if(cont==0):
-                    print(f"Eu sou o Kaiser :O")
                 if(paar==1):
                     if(cont>4):
                         print(f"O numero da posição {numero_aleatorio*-1} é maior que 4")
@@ -107,6 +105,7 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                 dica-=1
 
         print(c1,c2,c3,c4) #Imprime os numeros já certos e aqueles que faltam;
+
     #Define vitoria ou derota:
 
         if (num==num_correto):
@@ -119,9 +118,7 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                 print (f'\nVocê perdeu!')
                 print(f'O codigo era {num_correto}')
 
-
     #Pergunta se o usuario deseja jogar novamente:
-
 
     print(f"\t\nDeseja jogar novamente?")
     cont=int(input(f"\t\nPresione 1< para SIM e 0 para NÃO\t\n"))

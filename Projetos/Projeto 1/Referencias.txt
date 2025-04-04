@@ -6,3 +6,5 @@ as dicas do zero
 =======
 https://pt.stackoverflow.com/questions/72678/como-limpar-o-console-no-python#:~:text=Simplesmente%20pressione%20ctrl%20%2B%20L%20(funciona,voc%C3%AA%20nem%20precisa%20escrever%20clear%20) (2-4-25 - 9:43)
 >>>>>>> a9e4a903695ad94278696d70b894303c7374c8c5
+https://www.youtube.com/watch?v=Cq7eg1LbvUo
+https://cursos.alura.com.br/forum/topico-como-limpar-a-tela-no-python-a-cada-iteracao-176861
