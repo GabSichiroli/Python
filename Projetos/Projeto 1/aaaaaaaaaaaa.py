@@ -9,12 +9,11 @@ while(jn<=9999): #Admistrador "Jogar novamente";
 
 
     #tela de entrada
-    print(f"\n\t\t\t-----------Bem vindo ao jogo de adivinhação!!----------\n")
-    print(f"\n\t\t     Você terá 10 tentativas para acertar a numeração correta!")
-    print(f"\n\t\tMas não se preocupe, caso haja dificuldade da partir da 5° tentativa,")
-    print(f"\n\t\t\t\tdicas serão disponibilizadas!\n")
-    print(f"\n\t\t\t-------------------Boa sorte!-----------------------\n")
-    input(f"\n\t\t\t          Aperte enter para continuar!\n")
+    print(f"\n-------Bem vindo ao jogo de adivinhação!!--------")
+    print(f"\nVocê terá 10 tentativas para acertar a numeração correta!")
+    print(f"\nMas não se preocupe, caso haja dificuldade\na partir da 5° tentativa, dicas serão disponibilizadas!")
+    print(f"\n-------------------Boa sorte!-----------------------")
+    input(f"\n\tAperte enter para continuar! ")
     os.system('cls')
 
     #Aleatorizador;
@@ -41,18 +40,22 @@ while(jn<=9999): #Admistrador "Jogar novamente";
     impar=0
     #Tentativas e Chutes
     for tent in range(10,0,-1):
-        print(f"\n\t\tVocê tem {tent} tentativa(s)")
+        print(f"\nVocê tem {tent} tentativa(s)")
 
         acertos_digitos=0 #Por rodada;
 
         num=int(input("\n\tInsira o seu chute:"))
-        #Validação do numero certo
+
+        #limpa a tela a cada tentativa
+      
+
+         #Validação do chute
+
         while ((num<1000) or (num>9999)):
 
             print(f'\n\tTome cuidado!!!')
             print(f'\tNúmero invalido')
             num=int(input("\n\tInsira o seu chute:"))
-            os.system('cls')
 
       #Confere se o número digitado está correto:
 
@@ -76,13 +79,10 @@ while(jn<=9999): #Admistrador "Jogar novamente";
     
         if(acertos_digitos==0):
             print(f'\nVocê não acertou nenhum digito nesta rodada:')
-            input(f"\n\t\t\t\t<<Clique em algo>>")
-            os.system('cls')
         else:
             print(f'\nVocê acertou {acertos_digitos} digito(s) desta vez.')
-            input(f"\n\t\t\t\t<<Clique em algo>>")
-            os.system('cls')
-        #Dicas;
+
+          #Dicas;
 
         if (tent==6):
             print(f'\nA partir dessa sua tentativa, te darei dicas agora!!')
@@ -142,8 +142,8 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                         print(f"\nO numero da posição {numero_aleatorio} é menor que 6")       
             dica-=1
             impar-=1
+                    
 
-        print(f"\n\t\t\t\t\tTentativa anterior: {num}")
         if(c1==-1):
             print(" _ ", end=" ")
         else:
