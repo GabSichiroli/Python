@@ -39,6 +39,9 @@ while(jn<=9999): #Admistrador "Jogar novamente";
 
     dica=1
     impar=0
+    resp=1
+    conti=0
+
     #Tentativas e Chutes
     for tent in range(10,0,-1):
         print(f"\n\t\tVocê tem {tent} tentativa(s)")
@@ -83,61 +86,49 @@ while(jn<=9999): #Admistrador "Jogar novamente";
             input(f"\n\t\t\t\t<<Clique em algo>>")
             os.system('cls')
         #Dicas
-        if (tent<=6 and dica==1):
+        if(tent==6):
             print(f'\nA partir dessa sua tentativa, te darei dicas agora!!')
+        if (tent<=6):
             numero_aleatorio = random.randint(1,4)
-            conti=-numero_aleatorio
+            conti=numero_aleatorio*-1
             print(conti)
             while True:
                 print(conti)
                 if(conti==c1):
                     conti=b1
-                    resp=num1
                 if(conti==c2):
                     conti=b2
-                    resp=num2
                 if(conti==c3):
                     conti=b3
-                    resp=num3
                 if(conti==c4):
                     conti=b4
-                    resp=num4
                 if conti<0: 
                     numero_aleatorio = random.randint(1,4)
                     conti=numero_aleatorio*-1
                 if num==num_correto:
                     break
                 if conti>0:
-                    break     
+                    break
         if(tent<=6 or tent==4 or tent==2):
             if(dica==1) :
                 if(conti==0):
                     print(f"\nO numero é nulo")
-                    
                 else:
                     if(conti%2==0):
                         print(f"\nO numero da posição {numero_aleatorio} é par")
-                    
                     else:
-                        print(f"O numero da posição {numero_aleatorio} é impar")
+                        print(f"O numero da posição {numero_aleatorio} é impar") 
                         impar+=1
                 dica+=1 
-        if(resp==conti):
-            dica-=1
-
         if((dica==2)and(tent==5 or tent==3)):
             if(impar==1):
                 if(conti>5):
-                    print(f"\nO numero da posição {numero_aleatorio} é maior que 5")
-                    
+                    print(f"\nO numero da posição {numero_aleatorio} é maior que 5")   
                 else:
-                    if(conti<5):
-                        print(f"\nO numero da posição {numero_aleatorio} é menor que 5")
-                        
+                    print(f"\nO numero da posição {numero_aleatorio} é menor que 5")        
             else:
                 if(conti<4):
-                    print(f"\nO numero da posição {numero_aleatorio} é maior que 4")
-                    
+                    print(f"\nO numero da posição {numero_aleatorio} é maior que 4")     
                 else:
                     if(conti>6):
                         print(f"\nO numero da posição {numero_aleatorio} é menor que 6")       
