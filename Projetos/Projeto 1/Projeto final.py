@@ -82,9 +82,8 @@ while(jn<=9999): #Admistrador "Jogar novamente";
             print(f'\nVocê acertou {acertos_digitos} digito(s) desta vez.')
             input(f"\n\t\t\t\t<<Clique em algo>>")
             os.system('cls')
-        #Dicas;
-
-        if (tent==6):
+        #Dicas
+        if (tent<=6 and dica==1):
             print(f'\nA partir dessa sua tentativa, te darei dicas agora!!')
             numero_aleatorio = random.randint(1,4)
             conti=-numero_aleatorio
@@ -93,22 +92,23 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                 print(conti)
                 if(conti==c1):
                     conti=b1
+                    resp=num1
                 if(conti==c2):
                     conti=b2
+                    resp=num2
                 if(conti==c3):
                     conti=b3
+                    resp=num3
                 if(conti==c4):
                     conti=b4
+                    resp=num4
                 if conti<0: 
                     numero_aleatorio = random.randint(1,4)
                     conti=numero_aleatorio*-1
                 if num==num_correto:
                     break
                 if conti>0:
-                    break
-                
-       
-               
+                    break     
         if(tent<=6 or tent==4 or tent==2):
             if(dica==1) :
                 if(conti==0):
@@ -120,10 +120,11 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                     
                     else:
                         print(f"O numero da posição {numero_aleatorio} é impar")
-                        
-                    impar+=1
+                        impar+=1
                 dica+=1 
-            
+        if(resp==conti):
+            dica-=1
+
         if((dica==2)and(tent==5 or tent==3)):
             if(impar==1):
                 if(conti>5):
