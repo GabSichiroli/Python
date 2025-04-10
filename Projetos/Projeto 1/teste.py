@@ -172,4 +172,4 @@ while(jn<=9999): #Admistrador "Jogar novamente";
     if(conti==1):
         jn+=1
     else:
-        jn+=10000
+        jn+=10001
