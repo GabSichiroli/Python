@@ -88,10 +88,9 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                     print(f"O numero da posição {numero_aleatorio} é impar")
                     impar+=1
                 else:
-                    print(f"O numero da posição{numero_aleatorio} é par")
+                    print(f"O numero da posição {numero_aleatorio} é par")
                 dica+=1 
-
-            if((dica==2)and(tent==4 or tent==2)):
+            if((dica==2)and (tent==4 or tent==2)):
                 if(impar==1):
                     if(cont>5):
                         print(f"O numero da posição {numero_aleatorio} é maior que 5")
