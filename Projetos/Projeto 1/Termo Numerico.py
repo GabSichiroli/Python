@@ -1,7 +1,6 @@
 import random
 import os 
 jn=0
-
 while(jn<=9999):
 
 
@@ -63,7 +62,6 @@ while(jn<=9999):
             num_saida4=num_usuario4
             acertos_digitos+=1
 
-    
         if(acertos_digitos==0):
             print(f'\nVocê não acertou nenhum digito nesta rodada:')
             input(f"\n\t\t\t\t<<Clique em ENTER>>")
@@ -80,8 +78,8 @@ while(jn<=9999):
         if (tent<=6 and dica==1):
             numero_aleatorio = random.randint(1,4)
             posicao_dica=numero_aleatorio*-1
+            salva_random=posicao_dica
             while True:
-        
                 if(posicao_dica==num_saida1):
                     posicao_dica=num_gerado1
                     posicao_usuario=num_usuario1
@@ -101,7 +99,7 @@ while(jn<=9999):
                 if posicao_dica<0: 
                     numero_aleatorio = random.randint(1,4)
                     posicao_dica=numero_aleatorio*-1
-                
+
                 if num==num_correto:
                     break
                 if posicao_dica>0:
