@@ -88,7 +88,6 @@ while(jn<=9999):
                 if(conti==0):
                     print(f"\nO numero é nulo")
                 else:
-<<<<<<< HEAD
                     print(f"O numero da posição {numero_aleatorio} é par")
                 dica+=1 
             if((dica==2)and (tent==4 or tent==2)):
@@ -97,7 +96,6 @@ while(jn<=9999):
                         print(f"O numero da posição {numero_aleatorio} é maior que 5")
                     if(cont<5):
                         print(f"O numero da posição {numero_aleatorio} é menor que 5")
-=======
                     if(conti%2==0):
                         print(f"\nO numero da posição {numero_aleatorio} é par")
                     else:
@@ -108,7 +106,6 @@ while(jn<=9999):
             if(impar==1):
                 if(conti>5):
                     print(f"\nO numero da posição {numero_aleatorio} é maior que 5")   
->>>>>>> 6b24fe6053c1860f60c7cc0ca535f99d49e5a0c7
                 else:
                     print(f"\nO numero da posição {numero_aleatorio} é menor que 5")        
             else:

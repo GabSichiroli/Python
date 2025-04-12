@@ -13,7 +13,6 @@ while(jn<=9999):
     print(f"\n\t\t\t-------------------Boa sorte!-----------------------\n")
     input(f"\n\t\t\t          Aperte enter para continuar!\n")
     os.system('cls')
-
     numero_aleatorio = random.randint(1000, 9999)
     num_gerado1=numero_aleatorio//1000
     num_gerado2=(numero_aleatorio%1000)//100
@@ -30,6 +29,8 @@ while(jn<=9999):
     impar=0
    
     for tent in range(10,0,-1):
+        print(f"Número aleatório gerado: {numero_aleatorio}") #O comando foi mantido para maiores manutenções do codigo;
+        print(f"\n\n\t\t!!!Os chutes aceitos são entre 1000 e 9999!!!\n\n")
         print(f"\n\t\tVocê tem {tent} tentativa(s)")
 
         acertos_digitos=0
@@ -124,10 +125,10 @@ while(jn<=9999):
                 else: 
                     print(f"\nO numero da posição {numero_aleatorio} é menor ou igual a 5")        
             else:
-                if(posicao_dica<4):
+                if(posicao_dica>4):
                     print(f"\nO numero da posição {numero_aleatorio} é maior que 4")     
                 else:
-                    if(posicao_dica>6):
+                    if(posicao_dica<6):
                         print(f"\nO numero da posição {numero_aleatorio} é menor que 6")       
             dica-=1
             impar-=1
