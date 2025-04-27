@@ -1,9 +1,11 @@
+#Bibliotecas;
+
 import random
 import os 
 
-jn=True #Variavel controle para se jogar novamente(jn=jogar novamente)
+jn=0 #Variavel controle para se jogar novamente(jn=jogar novamente)
 
-while jn: #Admistrador "Jogar novamente";
+while(jn<=9999): #Admistrador "Jogar novamente";
 
 
     #tela de entrada
@@ -39,12 +41,12 @@ while jn: #Admistrador "Jogar novamente";
     for tent in range(10,0,-1):
         print(f"\n\t\tVocê tem {tent} tentativa(s)")
         acertos_digitos=0
-        num=int(input("\n\tInsira um numero entre 1000 a 9999:"))
+        num=int(input("\n\tInsira o seu chute:"))
         while ((num<1000) or (num>9999)):
 
             print(f'\n\tTome cuidado!!!')
             print(f'\tNúmero invalido')
-            num=int(input("\n\tInsira entre 1000 a 9999:"))
+            num=int(input("\n\tInsira o seu chute:"))
             os.system('cls')
         num_usuario1=num//1000
         if(num_gerado1==num_usuario1):
@@ -105,7 +107,7 @@ while jn: #Admistrador "Jogar novamente";
                 if posicao_dica>0:
                     break 
         if(tent<=6 or tent==4 or tent==2):
-            if(dica==1):
+            if(dica==1) :
                 if(posicao_dica==0):
                     print(f"\nO numero é nulo")
                 else:
@@ -123,10 +125,10 @@ while jn: #Admistrador "Jogar novamente";
                 else:
                     print(f"\nO numero da posição {numero_aleatorio} é menor que 5")        
             else:
-                if(posicao_dica>4):
+                if(posicao_dica<4):
                     print(f"\nO numero da posição {numero_aleatorio} é maior que 4")     
                 else:
-                    if(posicao_dica<6):
+                    if(posicao_dica>6):
                         print(f"\nO numero da posição {numero_aleatorio} é menor que 6")       
             dica-=1
             impar-=1
@@ -159,5 +161,7 @@ while jn: #Admistrador "Jogar novamente";
                 print(f'O codigo era {num_correto}')
     print(f"\t\nDeseja jogar novamente?")
     posicao_dica=int(input(f"\t\nPresione 1< para SIM e 0 para NÃO\t\n"))
-    if(posicao_dica!=1):
-        jn=False
+    if(posicao_dica==1):
+        jn+=1
+    else:
+        jn+=10000

@@ -114,27 +114,26 @@ while(jn<=9999): #Admistrador "Jogar novamente";
                     break
                 if conti>0:
                     break
-        if(tent<=6 or tent==4 or tent==2):
-            if(dica==1) :
-                if(conti==0):
-                    print(f"\nO numero é nulo")
-                else:
-                    if(conti%2==0):
-                        print(f"\nO numero da posição {numero_aleatorio} é par")
+            if(tent<=6 or tent==4 or tent==2):
+                if(dica==1) :
+                    if(conti==0):
+                        print(f"\nO numero é nulo")
                     else:
-                        print(f"O numero da posição {numero_aleatorio} é impar") 
-                        impar+=1
+                        if(conti%2==0):
+                            print(f"\nO numero da posição {numero_aleatorio} é par")
+                        else:
+                            print(f"O numero da posição {numero_aleatorio} é impar") 
+                            impar+=1
                 dica+=1 
-        if((dica==2)and(tent==5 or tent==3)):
-            if(impar==1):
-                if(conti>5):
-                    print(f"\nO numero da posição {numero_aleatorio} é maior que 5")   
-                else:
-                    print(f"\nO numero da posição {numero_aleatorio} é menor que 5")        
-            else:
-                if(conti<4):
-                    print(f"\nO numero da posição {numero_aleatorio} é maior que 4")     
-                else:
+            if((dica==2)and(tent==5 or tent==3)):
+                if(impar==1):
+                    if(conti>5):
+                        print(f"\nO numero da posição {numero_aleatorio} é maior que 5")   
+                    else:
+                        print(f"\nO numero da posição {numero_aleatorio} é menor que 5")        
+                else:    
+                    if(conti<4):
+                        print(f"\nO numero da posição {numero_aleatorio} é maior que 4")     
                     if(conti>6):
                         print(f"\nO numero da posição {numero_aleatorio} é menor que 6")       
             dica-=1
